@@ -3,9 +3,11 @@
 // 🏡 Task 1: Variables
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
+let name = "jonathan";
+let principal = 200000;
+let interesRate = 0.05;
 
-
-
+let years = 30;
 
 
 // 🏡 Task 1.5: Simple Math
@@ -15,7 +17,8 @@
 (2) Create another variable called `periods` and give it the value of years*12.
 */
 
-
+let monthlyInterestRate = interesRate / 12;
+periods = years * 12;
 
 
 // 🏡 Task 2: Harder Math
@@ -34,17 +37,29 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 
 When your math is correct, monthlyRate will equal 1073.64
 */
+let n1 = Math.pow(1 + monthlyInterestRate, periods);
+let numerator = n1 * monthlyInterestRate;
+let denominator = Math.pow(1 + monthlyInterestRate, periods) - 1;
+let monthlyRate = principal * numerator / denominator;
 
-
-
-
+console.log(monthlyRate)
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name}, your monthly rate is ${monthlyRate}"
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
+let name = "jonathan";
+let principal = 200000;
+let interesRate = 0.05;
 
+let years = 30;
 
+let n1 = Math.pow(1 + monthlyInterestRate, periods);
+let numerator = n1 * monthlyInterestRate;
+let denominator = Math.pow(1 + monthlyInterestRate, periods) - 1;
+let monthlyRate = principal * numerator / denominator;
+
+console.log(monthlyRate)
 
 
 
